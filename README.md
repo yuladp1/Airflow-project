@@ -34,23 +34,21 @@ AirflowDocker/
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/yuladp1/Airflow-project.git
 cd airflow-etl-pipeline
 
 ### 2. Start Airflow with Docker
 
-bash
 docker-compose up
 
-3. Open Airflow UI
+### 3. Open Airflow UI
 Go to http://localhost:8080
-Log in with:
 
+Log in with:
 Username: airflow
 Password: airflow
 
-4. Trigger the DAG
+### 4. Trigger the DAG
 Find the DAG named my_first_dag in the Airflow UI.
 
 Turn it on and trigger it manually or let it run on schedule.
@@ -58,11 +56,8 @@ Turn it on and trigger it manually or let it run on schedule.
 📄 Output
 After the DAG completes, the resulting CSV will be saved in:
 
-bash
 files/sales_summary.csv
 If you don't see the file on your host machine, it might be inside the Docker container. You can copy it like this:
-
-bash
 docker cp airflowdocker-airflow-webserver-1:/opt/airflow/files/sales_summary.csv ./files/
 
 🔧 Notes
