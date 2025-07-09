@@ -35,7 +35,7 @@ AirflowDocker/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yuladp1/airflow-etl-pipeline.git
+git clone https://github.com/yuladp1/Airflow-project.git
 cd airflow-etl-pipeline
 
 ### 2. Start Airflow with Docker
