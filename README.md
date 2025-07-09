@@ -3,8 +3,6 @@
 This project is an example of an **ETL pipeline using Apache Airflow**, running in a **Docker environment**.  
 It fetches data from a public API, transforms it using Pandas, and saves the output to a CSV file.
 
----
-
 ## 📦 Features
 
 - ⏬ **Extract**: Fetches product data from `https://fakestoreapi.com/products`
@@ -13,10 +11,8 @@ It fetches data from a public API, transforms it using Pandas, and saves the out
 - 🐳 **Runs via Docker** using the official [Airflow Docker image](https://airflow.apache.org/docs/docker-stack/)
 - 🗂️ Task communication via **XCom**
 
----
-
 ## 🧱 Project Structure
-
+```
 AirflowDocker/
 │
 ├── dags/
@@ -26,24 +22,24 @@ AirflowDocker/
 │ └── sales_summary.csv # Final CSV output (after DAG run)
 │
 ├── docker-compose.yml # Docker setup for Airflow
-└── README.md # This file
-
----
+└── README.md # This file 
+```
 
 ## ▶️ How to Run
 
 ### 1. Clone the Repository
-
+```
 git clone https://github.com/yuladp1/Airflow-project.git
 cd airflow-etl-pipeline
-
+```
 ### 2. Start Airflow with Docker
-
+```
 docker-compose up
-
+```
 ### 3. Open Airflow UI
-Go to http://localhost:8080
-
+```
+http://localhost:8080
+```
 Log in with:
 Username: airflow
 Password: airflow
@@ -62,7 +58,7 @@ docker cp airflowdocker-airflow-webserver-1:/opt/airflow/files/sales_summary.csv
 
 🔧 Notes
 Python packages used:
-
+```
 pandas
 requests
 Airflow features:
@@ -70,9 +66,9 @@ PythonOperator
 XCom
 Custom DAGs with dependencies
 Compatible with Airflow 2.x
-
+```
 📈 Future Improvements
-Add unit tests for data transformation
-Store CSV output to S3 or Google Cloud Storage
-Add email alert on failure
-Add data validation step
+- Add unit tests for data transformation
+- Store CSV output to S3 or Google Cloud Storage
+- Add email alert on failure
+- Add data validation step
